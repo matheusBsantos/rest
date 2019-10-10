@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Restaurante</title>
+    </h:head>
+    <h:body>
+        <h1>RESTAURANTE </h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                
+                <h:outputLabel value="Nome do prato:"/>
+                <h:inputText value="#{bean.restaurante.nome}"/>
+                 <h:outputLabel value="Ingrediente1:"/>
+                 <h:inputText value="#{bean.restaurante.ingrediente1}"/>
+                 <h:outputLabel value="Ingrediente2:"/>
+                 <h:inputText value="#{bean.restaurante.ingrediente2}"/>
+                 <h:outputLabel value="ingrediente3:"/>
+                 <h:inputText value="#{bean.restaurante.ingrediente3}"/>
+                 <h:outputLabel value="Ingrediente4:"/>
+                 <h:inputText value="#{bean.restaurante.ingrediente4}"/>
+              
+                              
+            </h:panelGrid>
+            <h:panelGrid columns="4">
+                <h:commandButton value="Salvar" action="#{bean.inserir()}"/>
+                <h:commandButton value="Pesquisar" action="#{bean.pesquisar()}"/>
+                <h:commandButton value="Alterar" action="#{bean.alterar()}"/>
+                <h:commandButton value="Excluir" action="#{bean.excluir()}"/>
+            </h:panelGrid>
+        </h:form>        
+    </h:body>
+</html>
+
